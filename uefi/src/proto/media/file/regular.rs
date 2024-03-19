@@ -56,7 +56,7 @@ impl RegularFile {
 
     /// Internal method for reading without chunking. This is used to implement
     /// `Directory::read_entry`.
-    pub(super) fn read_unchunked(&mut self, buffer: &mut [u8]) -> Result<usize, Option<usize>> {
+    pub fn read_unchunked(&mut self, buffer: &mut [u8]) -> Result<usize, Option<usize>> {
         let mut buffer_size = buffer.len();
         let status =
             unsafe { (self.imp().read)(self.imp(), &mut buffer_size, buffer.as_mut_ptr().cast()) };
