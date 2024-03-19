@@ -862,6 +862,20 @@ dependencies = [
 ]
 
 [[package]]
+name = "uefi"
+version = "0.27.0"
+source = "git+https://github.com/nianyush/uefi-rs.git?branch=unchunked#ee5c69cf611de1c14f8ce242c248d7c814af929a"
+dependencies = [
+ "bitflags 2.4.2",
+ "log",
+ "ptr_meta",
+ "ucs2",
+ "uefi-macros",
+ "uefi-raw",
+ "uguid",
+]
+
+[[package]]
 name = "uefi-macros"
 version = "0.13.0"
 dependencies = [
@@ -869,7 +883,7 @@ dependencies = [
  "quote",
  "syn 2.0.53",
  "trybuild",
- "uefi",
+ "uefi 0.27.0",
 ]
 
 [[package]]
@@ -888,7 +902,7 @@ dependencies = [
  "cfg-if",
  "log",
  "qemu-exit",
- "uefi",
+ "uefi 0.27.0 (git+https://github.com/nianyush/uefi-rs.git?branch=unchunked)",
 ]
 
 [[package]]
@@ -897,7 +911,7 @@ version = "0.2.0"
 dependencies = [
  "log",
  "qemu-exit",
- "uefi",
+ "uefi 0.27.0",
  "uefi-services",
 ]
 
@@ -905,7 +919,7 @@ dependencies = [
 name = "uefi_app"
 version = "0.1.0"
 dependencies = [
- "uefi",
+ "uefi 0.27.0",
  "uefi-services",
 ]
 
